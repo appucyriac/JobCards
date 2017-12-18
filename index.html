@@ -1,0 +1,39 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Job Cards</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/Job cards- Styles.css">
+      <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+      <script type="text/javascript" src="scripts/card-drag.js"></script>     
+    </head>
+    <body>
+
+    <div class="card-stack-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1>Job Cards</h1>
+            <div class="card card1" draggable="true" ondragstart="drag(event)" ondragend="setPos(event)" id="card1"><p>1</p><p>Testing</p></div>
+            <div class="card card2" draggable="true" ondragstart="drag(event)" ondragend="setPos(event)" id="card2"><p>2</p><p>Coding</p></div>
+            <div class="card card3" draggable="true" ondragstart="drag(event)" ondragend="setPos(event)" id="card3"><p>3</p><p>Design</p></div>
+            <div class="card card4" draggable="true" ondragstart="drag(event)" ondragend="setPos(event)" id="card4"><p>4</p><p>Analysis</div>
+    </div>
+    
+    <div class="employee-container1 card-stack-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1>Tony Stark</h1>
+    </div>
+
+    <div class="employee-container2  card-stack-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1>Peter Parker</h1>
+    </div>
+    <div class="employee-container3  card-stack-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1>Vision</h1>
+    </div>
+    <div class="employee-container4  card-stack-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1>Black Widow</h1>
+    </div>
+    <div class="employee-container5  card-stack-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <h1>Hulk</h1>
+    </div>
+    </body>
+    </html>

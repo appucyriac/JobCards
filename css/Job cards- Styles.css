@@ -1,0 +1,93 @@
+body, html {
+	height: 100%;
+	min-height: 100%;
+}
+body {
+	user-select: none;
+	overflow-x: scroll;
+}
+h1{
+    font-family: 'Play', sans-serif;
+    font-weight: normal;
+    font-size: 19px;
+    margin-left: 37px;
+}
+
+.card-stack-container {
+    border: 1px solid lightgray;
+    width: 163px;
+    height: 600px;
+    padding: 10px;
+    border-radius: 25px;
+    overflow-y: scroll;
+    position: absolute;
+}
+
+.card {
+	background-color: #1D2E35;
+	width: 98px;
+	height: 138px;
+	border-radius: 5px;
+	display: inline-block;
+	position: absolute;
+	font-size: 1.4rem;
+}
+
+.card1 {
+    left: 50px;
+    background-color: red;
+}
+
+.card2 {
+    left: 50px;
+    top:230px;
+    background-color: green;
+}
+
+.card3 {
+    left: 50px;
+    top: 410px;
+    background-color: blue;
+}
+.card4 {
+    left: 50px;
+    top: 590px;
+    background-color: grey;
+}
+.employee-container1{
+	position: absolute;
+    left: 300px;
+    top: 8px;
+}
+.employee-container2{
+	position: absolute;
+    left: 600px;
+    top: 8px;
+}
+.employee-container3{
+	position: absolute;
+    left: 900px;
+    top: 8px;
+}
+.employee-container4{
+	position: absolute;
+    left: 1200px;
+    top: 8px;
+}
+.employee-container5{
+	position: absolute;
+    left: 1500px;
+    top: 8px;
+}
+::-webkit-scrollbar {
+width: 12px;
+height: 12px;
+}
+::-webkit-scrollbar-track {
+border: none;
+}
+
+::-webkit-scrollbar-thumb {
+background: #41C3F7 ;  
+border-radius: 10px;
+}
