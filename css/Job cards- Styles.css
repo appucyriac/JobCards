@@ -12,47 +12,95 @@ h1{
     font-size: 19px;
     margin-left: 37px;
 }
+ul{
+	margin-top: -100px;
+	list-style: none;
+}
+li{
+  margin: 150px 0;
+}
 
+li::before {
+  display:          inline-block;
+  vertical-align:   middle;
+  width:            5px;
+  height:           5px;
+  background-color: #000000;
+  margin-right:     8px;
+  content:          ' '
+}
+p{
+	font-size: 14px;
+	font-weight: normal;
+	font-family: 'Abel', sans-serif;
+
+}
 .card-stack-container {
+	margin-top: 30px;	
     border: 1px solid lightgray;
     width: 163px;
-    height: 600px;
+    height: 400px;
+    padding: 10px;
+    border-radius: 15px;
+    overflow-y: scroll;
+    position: absolute;
+}
+.job-assign-box {
+    margin-top: 30px;
+    border-right-color: 1px solid lightgray;
+    width: 1000px;
+    height: 480px;
     padding: 10px;
     border-radius: 25px;
     overflow-y: scroll;
     position: absolute;
+    margin-left: 90px;
 }
-
+.save-button{
+	margin-top: 560px;
+    float: right;
+    margin-right: 300px;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #41C3F7;
+    border: none;
+    color: white;
+    outline: none;
+}
+.save-button:focus{
+	outline: none;
+}
 .card {
 	background-color: #1D2E35;
-	width: 98px;
+	width: 80px;
 	height: 138px;
 	border-radius: 5px;
 	display: inline-block;
 	position: absolute;
 	font-size: 1.4rem;
+	padding-left: 20px;
 }
 
 .card1 {
     left: 50px;
-    background-color: red;
+    background-color: #FBAA72; 
 }
 
 .card2 {
     left: 50px;
-    top:230px;
-    background-color: green;
+    background-color: #4ADF70;  
 }
 
 .card3 {
     left: 50px;
-    top: 410px;
-    background-color: blue;
+    background-color: #EC8CF4;
+
 }
 .card4 {
     left: 50px;
-    top: 590px;
-    background-color: grey;
+    background-color: #B0ABB3; 
+
 }
 .employee-container1{
 	position: absolute;
