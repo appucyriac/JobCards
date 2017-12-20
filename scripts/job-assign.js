@@ -9,7 +9,7 @@ class localStorageHandler {
 		});
 	}
 }
-const unassigned = [{
+let cards = [{
 		"id": "1",
         "job":"Testing",
         "time":"12Hrs"
@@ -31,5 +31,5 @@ const unassigned = [{
 	}]
 let local = new localStorageHandler();
 $(document).ready(() => {
-	local.set("job-data", JSON.stringify(unassigned));
+	local.set("cards", JSON.stringify(cards));
 });
