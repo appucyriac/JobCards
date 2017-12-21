@@ -51,7 +51,7 @@ drop = (ev) => {
 	let data = ev.dataTransfer.getData("card");
 	ev.srcElement.children[1].appendChild(document.getElementById(data));
 	
-		if(ev.target.id=="unassignedStack")
+		if(ev.target.id=="unassignedStack" || ev.target.className == "card-stack")
 	        unassigned.push(JSON.parse(lsh.get("jobCard")));
 	    else
 	        pushInJobCard(ev);

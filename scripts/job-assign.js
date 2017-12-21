@@ -32,4 +32,11 @@ let cards = [{
 let local = new localStorageHandler();
 $(document).ready(() => {
 	local.set("cards", JSON.stringify(cards));
+	p=JSON.parse(local.get("unassigned"));
+	_.forEach(p, function(value) {
+		 newRow=_.template('<li draggable="true" ondragstart="drag(event)" id="<%=id%>"><div class="card card<%=id%>" id="card<%=id%>" ondrop=""><p id="id"><%=id%></p><p id="job"><b><%=job%></b></p><p id="time"><%=time%></p></div></li>');
+		 newRow=newRow({'id':value.id,'job':value.job,'time':value.time});
+		 $(".card-stack").append(newRow);
+    });
+
 });
