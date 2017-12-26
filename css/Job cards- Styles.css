@@ -44,6 +44,7 @@ p{
     border-radius: 15px;
     overflow-y: scroll;
     position: absolute;
+    list-style-type: none;
 }
 .job-assign-box {
     margin-top: 30px;

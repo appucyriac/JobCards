@@ -1,20 +1,4 @@
-let assigned = [
-	[{
-		'name': 'tony'
-	}],
-	[{
-		'name': 'hulk'
-	}],
-	[{
-		'name': 'peter'
-	}],
-	[{
-		'name': 'vision'
-	}],
-	[{
-		'name': 'widow'
-	}]
-]
+
 let lsh = new localStorageHandler();
 allowDrop = (ev) => {
 	ev.preventDefault();
@@ -47,7 +31,7 @@ else
 
 drop = (ev) => {
 	ev.preventDefault();
-
+    unassigned = JSON.parse(lsh.get("unassigned"));
 	let data = ev.dataTransfer.getData("card");
 	ev.srcElement.children[1].appendChild(document.getElementById(data));
 	
@@ -69,6 +53,7 @@ getData = (ctrl) => {
 }
 
 popOutJobCard = (ev) => {
+	assigned=JSON.parse(lsh.get("assigned"));
 	_.forEach(assigned, function(value) {
 		p = _.filter(value, {
 			'id': ev.target.id
@@ -76,19 +61,22 @@ popOutJobCard = (ev) => {
 		if (p.length != 0) {
 			index = value.findIndex(i => i.id === ev.target.id);
 			value.splice(index, 1);
+		lsh.set("assigned",JSON.stringify(assigned));
 		}
 	});
 }
 
 pushInJobCard = (ev) => {
-	_.forEach(assigned, function(value) {
+	p=JSON.parse(lsh.get("assigned"));
+	_.forEach(p, function(value) {
 		if (ev.target.id == value[0].name) {
 			value.push(JSON.parse(lsh.get("jobCard")));
+			lsh.set("assigned",JSON.stringify(p));
 		}
+		
 	});
 }
 
 saveData = () =>{
-lsh.set("assigned",JSON.stringify(assigned));
 lsh.set("unassigned",JSON.stringify(unassigned));	
 }
